@@ -5,7 +5,6 @@ namespace grawkosci
     public static class narzedziakosci
     {
         private static Random random = new Random();
-
         public static List<int> RzutKosci()
         {
             var kosci = new List<int>();
@@ -13,7 +12,6 @@ namespace grawkosci
                 kosci.Add(RzutJednaKoscia());  // dodaj rzut jednej kości
             return kosci;
         }
-
         public static int RzutJednaKoscia()
         {
             return random.Next(1, 7); // losuje liczbę od 1 do 6
