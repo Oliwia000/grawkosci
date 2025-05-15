@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        var gra = new grakosci();
-        gra.Start();
+        var gra = new grakosci(); // utworzenie gry
+        gra.Start();  
     }
 }

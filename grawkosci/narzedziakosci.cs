@@ -10,13 +10,13 @@ namespace grawkosci
         {
             var kosci = new List<int>();
             for (int i = 0; i < 5; i++)
-                kosci.Add(RzutJednaKoscia());
+                kosci.Add(RzutJednaKoscia());  // dodaj rzut jednej kości
             return kosci;
         }
 
         public static int RzutJednaKoscia()
         {
-            return random.Next(1, 7);
+            return random.Next(1, 7); // losuje liczbę od 1 do 6
         }
     }
 

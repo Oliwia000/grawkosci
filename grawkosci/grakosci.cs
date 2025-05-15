@@ -1,28 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace grawkosci
 {
     public class grakosci
     {
-        private List<int> kosciGracza1;
+        private List<int> kosciGracza1; //kości gracza 1
         private List<int> kosciGracza2;
-
         public void Start()
         {
-            Console.WriteLine("Rozpoczynamy grę!");
+            Console.WriteLine("Rozpoczynamy grę!\n");
 
-            kosciGracza1 = narzedziakosci.RzutKosci();
+            kosciGracza1 = narzedziakosci.RzutKosci();  // pierwszy rzut
             kosciGracza2 = narzedziakosci.RzutKosci();
 
-            Console.WriteLine("Kości gracza 1: " + string.Join(", ", kosciGracza1));
+            Console.WriteLine("Kości gracza 1: " + string.Join(", ", kosciGracza1));  //  join dzeli np ' ,', czy '- '
             Console.WriteLine("Kości gracza 2: " + string.Join(", ", kosciGracza2));
 
             kosciGracza1 = Przerzut(kosciGracza1, "Gracz 1");
-            kosciGracza2 = Przerzut(kosciGracza2, "Gracz 2");
+            kosciGracza2 = Przerzut(kosciGracza2, "Gracz 2"); //przerzut wybranej kosci
 
             Console.WriteLine("Ostateczne kości gracza 1: " + string.Join(", ", kosciGracza1));
             Console.WriteLine("Ostateczne kości gracza 2: " + string.Join(", ", kosciGracza2));
@@ -40,21 +36,21 @@ namespace grawkosci
             else
                 Console.WriteLine("Remis!");
         }
-
         private List<int> Przerzut(List<int> kosci, string gracz)
         {
-            Console.WriteLine($"{gracz}, wpisz numery kości do przerzutu (np. 1,3): ");
-            string input = Console.ReadLine();
+            Console.WriteLine($"{gracz}, wpisz numery kości do przerzutu (np. 1,3) lub Enter, aby pominąć: "); // ptanie gracza, które kości chce przerzucić lub może pominąć
+
+            string? input = Console.ReadLine();
             var nowaLista = new List<int>(kosci);
 
-            if (!string.IsNullOrWhiteSpace(input))
+            if (!string.IsNullOrWhiteSpace(input)) // jeśli coś wpisano , dzielimy po ,
             {
                 var indeksy = input.Split(',');
 
                 foreach (var indeks in indeksy)
                 {
-                    if (int.TryParse(indeks.Trim(), out int i) && i >= 1 && i <= 5)
-                        nowaLista[i - 1] = narzedziakosci.RzutJednaKoscia();
+                    if (int.TryParse(indeks.Trim(), out int i) && i >= 1 && i <= 5) //(1–5), odejmujemy 1 bo lista zaczyna się od 0
+                        nowaLista[i - 1] = narzedziakosci.RzutJednaKoscia(); // losujemy nową wartość
                 }
             }
 
