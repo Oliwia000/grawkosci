@@ -9,7 +9,7 @@ namespace grawkosci
         private List<int> kosciGracza2;
         public void Start()
         {
-            Console.WriteLine("Rozpoczynamy grę!\n");
+            Console.WriteLine("  Rozpoczynamy grę!\n ");
 
             kosciGracza1 = narzedziakosci.RzutKosci();  // pierwszy rzut
             kosciGracza2 = narzedziakosci.RzutKosci();
