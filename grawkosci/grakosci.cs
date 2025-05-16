@@ -14,7 +14,7 @@ namespace grawkosci
             kosciGracza1 = narzedziakosci.RzutKosci();  // pierwszy rzut
             kosciGracza2 = narzedziakosci.RzutKosci();
 
-            Console.WriteLine("Kości gracza 1: " + string.Join(", ", kosciGracza1));  //  join dzeli np ' ,', czy '- '
+            Console.WriteLine("Kości gracza 1: " + string.Join(", ", kosciGracza1));  //  join dzeli  'przerwa ,odziela, 'np ' ,', czy '- '
             Console.WriteLine("Kości gracza 2: " + string.Join(", ", kosciGracza2));
 
             kosciGracza1 = Przerzut(kosciGracza1, "Gracz 1");
