@@ -10,9 +10,9 @@ namespace grawkosci
     {
         public static int ObliczPunkty(List<int> kosci)
         {
-            var grupy = kosci.GroupBy(k => k).OrderByDescending(g => g.Count()).ThenByDescending(g => g.Key).ToList(); // grupujemy kości po wartościach (np. 3x2), sortujemy malejąco wg liczebności, potem wartości
+            var grupy = kosci.GroupBy(k => k).OrderByDescending(g => g.Count()).ThenByDescending(g => g.Key).ToList(); // grupuje kości po wartościach , sort. malejąco wg liczebności, potem wartości
 
-            var liczby = kosci.OrderBy(x => x).ToList();  // sortujemy kości rosnąco
+            var liczby = kosci.OrderBy(x => x).ToList();  // sort. kości rosnąco
 
             // 5 tych samych oczek- 50 pkt
             if (grupy[0].Count() == 5)
@@ -34,7 +34,7 @@ namespace grawkosci
             if (grupy[0].Count() == 3)
                 return grupy[0].Key * 4 + SumaPozostalych(grupy, 3);
 
-            // Dwie pary lub para- wartość największej pary * 3 + suma reszty
+            // Dwie pary lub para- wartość największej pary * 3 + suma r.
             if (grupy[0].Count() == 2)
                 return grupy[0].Key * 3 + SumaPozostalych(grupy, 2);
 
