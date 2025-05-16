@@ -9,7 +9,7 @@ namespace grawkosci
         {
             var kosci = new List<int>();
             for (int i = 0; i < 5; i++)
-                kosci.Add(RzutJednaKoscia());  // dodaj rzut jednej kości
+                kosci.Add(RzutJednaKoscia()); 
             return kosci;
         }
         public static int RzutJednaKoscia()
