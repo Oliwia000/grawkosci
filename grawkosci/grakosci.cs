@@ -43,7 +43,7 @@ namespace grawkosci
             string? input = Console.ReadLine();
             var nowaLista = new List<int>(kosci);
 
-            if (!string.IsNullOrWhiteSpace(input)) // jeśli coś wpisano , dzielimy po ,
+            if (!string.IsNullOrWhiteSpace(input)) // jeśli coś wpisano , dzielimy po' , '
             {
                 var indeksy = input.Split(',');
 
