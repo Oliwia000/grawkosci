@@ -38,7 +38,7 @@ namespace grawkosci
         }
         private List<int> Przerzut(List<int> kosci, string gracz)
         {
-            Console.WriteLine($"{gracz}, wpisz numery kości do przerzutu (np. 1,3) lub Enter, aby pominąć: "); // ptanie gracza, które kości chce przerzucić lub może pominąć
+            Console.WriteLine($"{gracz}, wpisz numery kości do przerzutu (np. 1,3) lub enter, aby pominąć: "); // ptanie gracza, które kości chce przerzucić lub może pominąć
 
             string? input = Console.ReadLine();
             var nowaLista = new List<int>(kosci);
